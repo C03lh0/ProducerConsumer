@@ -2,7 +2,7 @@ from semaphore import Semaphore
 
 class Deposit:
 
-    def __init__(self, number: Semaphore, mutex: Semaphore, full: Semaphore, empty: Semaphore):
+    def __init__(self, number, mutex: Semaphore, full: Semaphore, empty: Semaphore):
         self.number = number
         self.mutex = mutex
         self.full = full

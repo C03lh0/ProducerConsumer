@@ -2,7 +2,7 @@ from deposit import Deposit
 import threading
 import time
 
-class Consomer(threading.Thread):
+class Consumer(threading.Thread):
 
     def __init__(self, deposit: Deposit):
         super().__init__()

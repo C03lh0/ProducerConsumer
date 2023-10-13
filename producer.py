@@ -11,7 +11,7 @@ class Producer(threading.Thread):
     def run(self):
         for i in range(0, 10):
             try:
-                self.deposit.storing(self.getName(), i)
+                self.deposit.produce(self.getName(), i)
                 time.sleep(0.1)
             except InterruptedError as erro:
                 print(f"Erro: {erro}")

@@ -6,11 +6,11 @@ from semaphore import Semaphore
 
 permission_number = 1
 
-mutex = Semaphore(permission_number)
+mutual_exclusion = Semaphore(permission_number)
 full = Semaphore(0)
-empty = Semaphore(permission_number)
+empty = Semaphore(1)
 
-deposit = Deposit(0, mutex, full, empty)
+deposit = Deposit(0, mutual_exclusion, full, empty)
 producer = Producer(deposit)
 consumer1 = Consumer(deposit)
 consumer2 = Consumer(deposit)
